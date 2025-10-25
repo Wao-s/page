@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math ToolKit: Herramienta de Cálculo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#soluciones">Cálculo</a>
+        <a href="#vectores">Visualización 3D</a>
+        <a href="#descarga" class="cta-nav">Descargar App</a>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+        <h1>Math ToolKit: El Poder de Julia para tu Ingeniería</h1>
+        <p class="subtitle">Resuelve sistemas, matrices 4x4 y visualiza vectores 3D con precisión y rapidez sin precedentes.</p>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <a href="#descarga" class="download-button">¡DESCARGA GRATIS!</a>
+                <p class="small-text">Versión 1.0.9 Sin instalación de Julia requerida</p>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/Planoporelorigen.gif" alt="Animación de vectores" class="responsive-img">
+            </div>
+        </div>
+    </header>
+
+    <section id="soluciones" class="feature-grid">
+        <h2>Optimiza tu tiempo de estudio</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Solución Garantizada (Sistemas 3 x 3)</h3>
+                <p>Olvida los errores de cálculo. Nuestro motor en Julia te da la solución inmediata para sistemas de hasta tres variables, mostrando el proceso paso a paso</p>
+                <img src="../assets/P9-2.png" alt="Ecuación resuelta" class="responsive-img-small">
+            </div>
+            <div class="grid-item">
+                <h3>El Motor Matricial 4 x 4</h3>
+                <p>Calcula determinantes, inversas y realiza multiplicaciones complejas en matrices de hasta 4 x 4. La precisión numérica que exigee la ingeniería</p>
+                <img src="../assets/RANGO-DE-UNA-MATRIZ.png" alt="Matriz 4 x 4" class="responsive-img-small">
+            </div>
+        </div>
+    </section>
+
+    <section id="vectores" class="unique-feature">
+        <h2>La Revolución Visual: Vectores en R3</h2>
+        <div class="vector-content">
+            <div class="vector-text">
+                <p>No solo calcules, "comprende". Visualiza la suma, el producto vectorial y las proyecciones en un entorno 3D interactivo</p>
+                <ul>
+                    <li>Gráficas de vectores en el espacio (R2 y R3)</li>
+                    <li>Cálculo y representación geométrica de Producto Cruz</li>
+                    <li>Ángulo y proyección de un vector sobre otro</li>
+                </ul>
+            </div>
+            <div class="vector-graphic">
+                <img src="../assets/17e786c5cd5176b5cd8ca80a2a330c23.jpg" alt="Entorno en Julia" class="responsive-img-large">
+            </div>
+        </div>
+    </section>
+
+    <section id="descarga" class="cta-final">
+        <h2>¿Listo para potenciar tu Álgebra?</h2>
+        <p>Tu ventaja competitiva comienza con la herramienta correcta. ¡Pruébala hoy!</p>
+        <a href="#" class="download-button" style="pointer-events: none; opacity: 0.7">DESCARGAR APLICACIÓN</a>
+        <p class="small-text">Desarrollado en Julia para un rendimiento excepcional</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Equipo Dinamita. Proyecto Final</p>
+        <p>Compilado y optimizado con el lenguaje Julia</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            const downloadButton = document.querySelector('.download-button');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 70;
+                    const sectionHeight = section.clientHeight;
+
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(Link => {
+                    link.classList.remove('active');
+                    if (Link.href.includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            downloadButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                alert("¡Gracias por su interés! El archivo de Math ToolKit estará disponible para descargar pronto, tras la compilación final en Julia");
+            });
+        });
+    </script>
+</body>
+</html>
